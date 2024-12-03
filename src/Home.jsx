@@ -287,7 +287,7 @@ const HomePage = () => {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`flex items-center p-5 rounded-lg shadow-sm ${
+                className={`flex items-center p-5 rounded-lg shadow-sm border border-[#E4E4E4] ${
                   step.description ? "bg-white" : "bg-green-100"
                 }`}
               >
@@ -296,7 +296,7 @@ const HomePage = () => {
                   {step.number}
                 </div>
                 <div className="flex-1 ml-12">
-                  <h4 className="text-[20px] font-['gayathri']  font-bold text-[#142929] ">{step.title}</h4>
+                  <h4 className="text-[20px] mt-2 font-['gayathri']  font-bold text-[#142929] ">{step.title}</h4>
                   {step.description && (
                     <p className="text-[16px] font-['Radio Canada Big']  font-semi-bold text-[#142929]">{step.description}</p>
                   )}
@@ -315,23 +315,35 @@ const HomePage = () => {
 
             {/* Risk Management System section start */}
     <section className="bg-gray-50 py-10">
-      <div className="max-w-[81%] mx-auto text-center">
+      <div className="max-w-[81%] mx-auto ">
         {/* Header */}
-        <h2 className="text-3xl font-bold mb-2">
-          Our Proprietary <span className="text-green-600">Risk</span>{" "}
-          <span className="text-green-600">Management</span> System
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-          Deploying advanced risk management techniques to protect investments
-          at both strategy and portfolio levels.
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+  {/* Left Content */}
+          <div className="flex justify-center md:justify-start">
+            <h1 className="font-['Gayathri'] font-medium text-[50px] text-gray-700">
+              Our Proprietary 
+              <span className="font-['Gayathri'] font-medium text-[50px] font-bold">
+                <span className="font-['Gayathri'] text-[#3B8F6E] font-medium text-[50px] font-bold"> Risk Management</span> System
+              </span>
+            </h1>
+          </div>
+          {/* Right Content */}
+          <div className="border-l-2 border-green-600 pl-8 flex items-center">
+            <p className="text-lg font-['Radio Canada Big'] text-[#142929] font-medium text-[16px] leading-relaxed">
+              Deploying advanced risk management techniques to protect investments at both strategy and portfolio levels.
+            </p>
+          </div>
+      </div>
+
+
 
         {/* RMS Box */}
-        <div className="flex justify-center mb-10">
-          <div className="bg-green-100 text-green-600 font-bold text-2xl p-6 rounded-lg shadow-lg">
-            RMS
+        <div className="flex justify-center items-center mb-10">
+          <div className=" bg-[#F4FFFB] flex justify-center items-center h-[100px] w-[150px]">
+            <h1 className="font-['Gayathri'] text-[#3B8F6E] mt-4 font-medium text-[50px] font-bold ">RMS</h1>
           </div>
         </div>
+
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
