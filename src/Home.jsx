@@ -14,6 +14,14 @@ import layer2 from './Assests/Layer-2.png'
 import card1 from './Assests/card (1).png'
 import card2 from './Assests/card (2).png'
 import card3 from './Assests/card (3).png'
+import l1 from './Assests/l1.png'
+import l2 from './Assests/l2.png'
+import s1 from './Assests/s1.png'
+import s2 from './Assests/s2.png'
+import dl1 from './Assests/dl1.png'
+import dl2 from './Assests/dl2.png'
+import ds1 from './Assests/ds1.png'
+import ds2 from './Assests/ds2.png'
 
 const HomePage = () => {
 
@@ -338,22 +346,36 @@ const HomePage = () => {
 
 
         {/* RMS Box */}
-        <div className="flex justify-center items-center mb-10">
+        <div className="flex justify-center items-center mb">
           <div className=" bg-[#F4FFFB] flex justify-center items-center h-[100px] w-[150px]">
             <h1 className="font-['Gayathri'] text-[#3B8F6E] mt-4 font-medium text-[50px] font-bold ">RMS</h1>
           </div>
         </div>
+            
+        <div className="flex flex-wrap justify-center items-center ">
+          <img src={l1} alt="l1" className=" " />
+          <img src={l2} alt="l2" className="" />
+          
+        </div>
 
+        <div className="flex justify-center items-center -mt-28">
+            <img src={s1} alt="s1" className="" />
+            <img src={s2} alt="s2" className="" />
+        </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+              className={`bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center ${
+                index === 4 ? 'lg:col-start-2 lg:col-end-4' : ''
+              }`}
             >
-              {/* Icon */}
-              <div className="text-4xl text-green-600 mb-4">{feature.icon}</div>
+              {/* Icon with green circular background */}
+              <div className="flex justify-center items-center w-16 h-16 bg-green-500 text-white text-4xl rounded-full mb-4">
+                {feature.icon}
+              </div>
               {/* Title */}
               <h4 className="text-lg font-semibold mb-2">{feature.title}</h4>
               {/* Description */}
@@ -361,6 +383,18 @@ const HomePage = () => {
             </div>
           ))}
         </div>
+
+        <div className="flex flex-wrap justify-center items-center ">
+          <img src={dl1} alt="dl1" className=" " />
+          <img src={dl2} alt="dl2" className="" />
+          
+        </div>
+
+        <div className="flex justify-center items-center -mt-28">
+            <img src={ds1} alt="ds1" className="" />
+            <img src={ds2 } alt="ds2" className="" />
+        </div>
+
       </div>
     </section>
 
